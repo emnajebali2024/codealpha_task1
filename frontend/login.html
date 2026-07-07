@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — ShopNova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+<div class="toast-box" id="toast-box"></div>
+
+<!-- Background -->
+<div style="position:fixed;inset:0;background:linear-gradient(135deg,#0F0C29,#302B63,#24243E);z-index:-2"></div>
+<div class="orb o1" style="position:fixed;z-index:-1"></div>
+<div class="orb o2" style="position:fixed;z-index:-1"></div>
+
+<div class="min-vh-100 d-flex flex-column justify-content-center py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-5">
+        <!-- Brand -->
+        <div class="text-center mb-4">
+          <a href="index.html" class="brand-logo d-inline-flex" style="font-size:1.6rem">
+            <div class="brand-icon">🛍</div> ShopNova
+          </a>
+        </div>
+
+        <div class="form-card">
+          <div class="text-center mb-4">
+            <h2 style="font-size:1.7rem;font-weight:800;color:#fff;margin-bottom:6px">Welcome Back 👋</h2>
+            <p style="color:var(--text-2);font-size:0.875rem">Sign in to continue shopping</p>
+          </div>
+
+          
+
+          <!-- Error -->
+          <div id="login-err" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25);border-radius:10px;padding:10px 14px;font-size:0.82rem;color:#EF4444;margin-bottom:18px" class="d-none"></div>
+
+          <form id="login-form" novalidate>
+            <div class="mb-4">
+              <label class="form-label">Email Address</label>
+              <input id="login-email" class="form-ctrl" type="email" placeholder="you@example.com" required>
+            </div>
+            <div class="mb-4" style="position:relative">
+              <label class="form-label">Password</label>
+              <input id="login-pwd" class="form-ctrl" type="password" placeholder="Enter your password" required>
+              <button type="button" id="login-eye" class="eye-btn">👁</button>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <label style="display:flex;align-items:center;gap:8px;font-size:0.82rem;color:var(--text-2);cursor:pointer">
+                <input type="checkbox" style="accent-color:var(--primary)"> Remember me
+              </label>
+              <a href="#" style="font-size:0.82rem;color:var(--primary)">Forgot password?</a>
+            </div>
+
+            <button type="submit" id="login-btn" class="btn-gp w-100 justify-content-center" style="padding:13px;font-size:1rem">
+              Sign In
+            </button>
+          </form>
+
+          <div class="my-4 d-flex align-items-center gap-3">
+            <div style="flex:1;height:1px;background:var(--glass-border)"></div>
+            <span style="font-size:0.78rem;color:var(--text-3)">OR</span>
+            <div style="flex:1;height:1px;background:var(--glass-border)"></div>
+          </div>
+
+          <button class="social-btn">
+            
+            Continue with Google
+          </button>
+
+          <p class="text-center mt-4 mb-0" style="font-size:0.875rem;color:var(--text-2)">
+            Don't have an account? <a href="register.html" style="color:var(--primary);font-weight:700">Create one →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

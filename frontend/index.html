@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopNova — Discover. Shop. Love.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ── TOAST ── -->
+<div class="toast-box" id="toast-box"></div>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="sn-nav navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="brand-logo" href="index.html">
+      <div class="brand-icon">🛍</div> ShopNova
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      style="color:#fff;background:var(--glass);border-radius:8px;padding:6px 10px">☰</button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link active" href="index.html">🏠 Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="products.html">🛒 Products</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">📂 Categories</a>
+          <ul class="dropdown-menu glass-dd">
+            <li><a class="dropdown-item" href="products.html?category=Electronics">⚡ Electronics</a></li>
+            <li><a class="dropdown-item" href="products.html?category=Clothing">👗 Clothing</a></li>
+            <li><a class="dropdown-item" href="products.html?category=Sports">🏃 Sports</a></li>
+            <li><a class="dropdown-item" href="products.html?category=Books">📚 Books</a></li>
+            <li><a class="dropdown-item" href="products.html?category=Home+%26+Garden">🏡 Home & Garden</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="products.html">🔍 All Categories</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-3">
+        <div class="nav-search">
+          <input id="nav-search" class="s-input" placeholder="Search products..." type="text">
+          <button id="nav-search-btn" class="s-btn">🔍</button>
+        </div>
+
+        <a href="cart.html" class="cart-ico" title="Cart">
+          🛒 <span class="cart-badge" style="display:none">0</span>
+        </a>
+
+        <!-- Guest -->
+        <div id="guest-nav" class="d-flex gap-2">
+          <a href="login.html" class="btn-ghost" style="padding:7px 18px;font-size:0.82rem">Login</a>
+          <a href="register.html" class="btn-gp" style="padding:7px 18px;font-size:0.82rem">Sign Up</a>
+        </div>
+
+        <!-- Logged in -->
+        <div id="user-nav" class="dropdown" style="display:none">
+          <button class="u-btn dropdown-toggle" data-bs-toggle="dropdown">
+            <img id="user-avt" src="" class="u-avt" alt="avatar">
+            <span id="user-name">User</span>
+          </button>
+          <ul class="dropdown-menu glass-dd dropdown-menu-end">
+            <li><a class="dropdown-item" href="orders.html"> My Orders</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item logout-btn" href="#"> Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="orb o3"></div><div class="orb o4"></div>
+
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="hero-badge">🔥 New Season Arrivals</div>
+        <h1 class="hero-title">
+          Discover<br>
+          <span class="text-grad-anim">Amazing</span><br>
+          Products
+        </h1>
+        <p class="hero-sub">
+          Shop the latest tech, fashion, and lifestyle products at unbeatable prices. Free shipping on orders over $100.
+        </p>
+        <div class="hero-cta d-flex flex-wrap gap-3">
+          <a href="products.html" class="btn-gp" style="font-size:1rem;padding:14px 36px">
+            Shop Now 🛍
+          </a>
+          <a href="products.html?featured=true" class="btn-ghost" style="font-size:1rem;padding:14px 36px">
+            Featured Deals ✨
+          </a>
+        </div>
+        <div class="hero-stats mt-5 d-flex gap-4 align-items-center flex-wrap">
+          <div>
+            <div class="stat-n count-up" data-target="50000" data-suffix="+">0+</div>
+            <span class="stat-lb">Happy Customers</span>
+          </div>
+          <div class="stat-dv"></div>
+          <div>
+            <div class="stat-n count-up" data-target="12000" data-suffix="+">0+</div>
+            <span class="stat-lb">Products</span>
+          </div>
+          <div class="stat-dv"></div>
+          <div>
+            <div class="stat-sf">4.9 ★</div>
+            <span class="stat-lb">Avg Rating</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating visual -->
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="hero-visual">
+          <div class="hero-ring"></div>
+
+          <div class="h-card hc1">
+            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=80&q=80" alt="iPhone">
+            <div class="fl-lbl"><span>iPhone 15 Pro Max</span><strong>$1,199.99</strong></div>
+          </div>
+
+          <div class="h-card hc2">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&q=80" alt="Headphones">
+            <div class="fl-lbl"><span>Sony WH-1000XM5</span><strong>$279.99</strong></div>
+          </div>
+
+          <div class="h-card hc3">
+            <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=80&q=80" alt="PS5">
+            <div class="fl-lbl"><span>PlayStation 5</span><strong>$499.99</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint"><div></div></div>
+</section>
+
+<!-- ══════════════════ CATEGORIES ══════════════════ -->
+<section class="cat-sec py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="s-tag">Browse by</div>
+      <h2 class="s-title">Shop <span class="text-grad">Categories</span></h2>
+    </div>
+    <div class="row g-3">
+      <div class="col-6 col-md-3 col-lg-2">
+        <a href="products.html?category=Electronics" class="cat-card text-decoration-none">
+          <div class="cat-ico">⚡</div><span>Electronics</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a href="products.html?category=Clothing" class="cat-card text-decoration-none">
+          <div class="cat-ico">👗</div><span>Clothing</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a href="products.html?category=Sports" class="cat-card text-decoration-none">
+          <div class="cat-ico">🏃</div><span>Sports</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a href="products.html?category=Books" class="cat-card text-decoration-none">
+          <div class="cat-ico">📚</div><span>Books</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a href="products.html?category=Home+%26+Garden" class="cat-card text-decoration-none">
+          <div class="cat-ico">🏡</div><span>Home</span>
+        </a>
+      </div>
+      <div class="col-6 col-md-3 col-lg-2">
+        <a href="products.html?category=Beauty" class="cat-card text-decoration-none">
+          <div class="cat-ico">💄</div><span>Beauty</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FEATURED PRODUCTS ══════════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-end mb-5">
+      <div>
+        <div class="s-tag">Hand Picked</div>
+        <h2 class="s-title">Featured <span class="text-grad">Deals</span></h2>
+        <p class="s-sub">Exclusive picks just for you</p>
+      </div>
+      <a href="products.html" class="btn-ghost d-none d-md-flex">View All →</a>
+    </div>
+    <div class="row g-0" id="featured-grid">
+      <!-- Loaded by JS -->
+      <div class="col-md-6 col-xl-3"><div class="skel mb-4"></div></div>
+      <div class="col-md-6 col-xl-3"><div class="skel mb-4 ms-md-3"></div></div>
+      <div class="col-md-6 col-xl-3"><div class="skel mb-4 ms-xl-3"></div></div>
+      <div class="col-md-6 col-xl-3"><div class="skel mb-4 ms-md-3 ms-xl-3"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ PARTNERS / BRANDS ══════════════════ -->
+<section class="partners-sec py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="s-tag">Trusted Partners</div>
+      <h3 class="s-title" style="font-size:1.6rem">Our <span class="text-grad">Brands</span></h3>
+    </div>
+  </div>
+  <div class="track-wrap py-3">
+    <div class="logo-track" id="logo-track">
+      <!-- Row duplicated for infinite scroll -->
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"></div>
+      <div class="logo-slot"><img src="https://cdn.worldvectorlogo.com/logos/samsung-8.svg" alt="Samsung"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Sony"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Dyson_%28Unternehmen%29_logo.svg/3840px-Dyson_%28Unternehmen%29_logo.svg.png" alt="Dyson"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"></div>
+      <!-- Duplicated for seamless loop -->
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"></div>
+      <div class="logo-slot"><img src="https://cdn.worldvectorlogo.com/logos/samsung-8.svg" alt="Samsung"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg" alt="Adidas"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Cisco_logo_blue_2016.svg" alt="Cisco"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Dyson_%28Unternehmen%29_logo.svg/3840px-Dyson_%28Unternehmen%29_logo.svg.png" alt="Dyson"></div>
+      <div class="logo-slot"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FEATURES / WHY US ══════════════════ -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="s-tag">Why ShopNova</div>
+      <h2 class="s-title">Shopping <span class="text-grad">Reimagined</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-ico">🚀</div>
+          <h5>Fast Delivery</h5>
+          <p>Express shipping in 24-48 hours to your doorstep, guaranteed.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-ico">🔒</div>
+          <h5>Secure Payment</h5>
+          <p>256-bit SSL encryption. Your financial data is always safe.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-ico">🔄</div>
+          <h5>Easy Returns</h5>
+          <p>30-day hassle-free returns with instant refund processing.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal">
+        <div class="feat-card">
+          <div class="feat-ico">🎧</div>
+          <h5>24/7 Support</h5>
+          <p>Round-the-clock customer service via chat, email, or phone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ NEWSLETTER ══════════════════ -->
+<section class="section-pad" style="padding-top:0">
+  <div class="container">
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(124,58,237,0.18),rgba(236,72,153,0.18));border:1px solid rgba(124,58,237,0.25);border-radius:28px;padding:60px 40px;text-align:center">
+      <div class="s-tag">Newsletter</div>
+      <h2 class="s-title mb-2">Get <span class="text-grad">Exclusive Deals</span></h2>
+      <p class="s-sub mb-4">Join 50,000+ shoppers and get the best deals first.</p>
+      <div class="d-flex justify-content-center gap-2 flex-wrap">
+        <input type="email" id="newsletter-email" placeholder="Enter your email..." 
+         class="form-ctrl" style="max-width:300px">
+        <button class="btn-gp" id="newsletter-btn" onclick="subscribeNewsletter()">
+         Subscribe ✉
+        </button>
+      </div>
+<div id="newsletter-msg" style="margin-top:14px;font-size:0.875rem;display:none"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer class="sn-footer">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-logo"><div class="brand-icon">🛍</div> ShopNova</div>
+        <p class="footer-desc">Your ultimate online shopping destination. Discover millions of products at amazing prices, delivered fast to your door.</p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="#" class="soc-btn">𝕏</a>
+          <a href="#" class="soc-btn">in</a>
+          <a href="#" class="soc-btn">📘</a>
+          <a href="#" class="soc-btn">📸</a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-head">Shop</div>
+        <ul class="footer-links">
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?featured=true">Featured</a></li>
+          <li><a href="products.html?category=Electronics">Electronics</a></li>
+          <li><a href="products.html?category=Clothing">Clothing</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-head">Account</div>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="cart.html">My Cart</a></li>
+          <li><a href="orders.html">My Orders</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-head">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#">📧 support@shopnova.com</a></li>
+          <li><a href="#">📞 +1 (800) SHOPNOVA</a></li>
+          <li><a href="#">📍 San Francisco, CA</a></li>
+        </ul>
+        <div class="mt-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="22" alt="PayPal" style="filter:brightness(0.5);margin-right:8px">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" height="22" alt="Visa" style="filter:brightness(0.5);margin-right:8px">
+        </div>
+      </div>
+    </div>
+    <div class="footer-div"></div>
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <p class="copy mb-0">© 2024 ShopNova. Built with ❤ for CodeAlpha Internship.</p>
+      <p class="copy mb-0">Full Stack Project by <strong style="color:var(--primary)">Emna Jebali</strong></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Load featured products on homepage
+document.addEventListener('DOMContentLoaded', async () => {
+  const grid = document.getElementById('featured-grid');
+  try {
+    const data = await window.SN.fetch('/products?featured=true&limit=4');
+    if (!data.products.length) { grid.innerHTML = '<p style="color:var(--text-2)" class="text-center col-12">No featured products.</p>'; return; }
+    grid.innerHTML = data.products.map(p => {
+      const img  = p.images?.[0] || `https://via.placeholder.com/400x300/7C3AED/ffffff?text=${encodeURIComponent(p.name)}`;
+      const disc = p.originalPrice ? Math.round(((p.originalPrice - p.price) / p.originalPrice) * 100) : 0;
+      return `
+        <div class="col-md-6 col-xl-3 mb-4">
+          <div class="prod-card h-100" style="animation:scaleIn 0.4s ease both">
+            <div class="prod-img-box">
+              <img src="${img}" alt="${p.name}" loading="lazy"
+                onerror="this.src='https://via.placeholder.com/400x300/7C3AED/ffffff?text=${encodeURIComponent(p.name)}'">
+              <span class="p-badge">⭐ Featured</span>
+              ${disc > 0 ? `<span class="p-badge-sale">-${disc}%</span>` : ''}
+              <div class="prod-acts">
+                <a href="product-detail.html?id=${p._id}" class="act-btn">👁</a>
+              </div>
+            </div>
+            <div class="prod-body">
+              <div class="p-cat">${p.category}</div>
+              <div class="p-name">${p.name}</div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span class="p-stars">${window.SN.stars(p.ratings||0)}</span>
+                <span class="p-rc">(${p.numReviews||0})</span>
+              </div>
+              <div class="p-price">
+                <span class="p-price-cur">$${p.price.toFixed(2)}</span>
+                ${p.originalPrice ? `<span class="p-price-orig">$${p.originalPrice.toFixed(2)}</span>` : ''}
+              </div>
+              <button class="btn-cart" onclick="
+                if(!window.SN.token()){window.location.href='login.html';return}
+                window.SN.fetch('/cart/add',{method:'POST',body:JSON.stringify({productId:'${p._id}',quantity:1})})
+                  .then(d=>{window.SN.setCartCount(d.cart.items.reduce((s,i)=>s+i.quantity,0));window.SN.toast('Added to cart! 🛒','s')})
+                  .catch(e=>window.SN.toast(e.message,'e'))">
+                🛒 Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+  } catch(e) { grid.innerHTML = `<p style="color:var(--danger)" class="col-12 text-center">${e.message}</p>`; }
+});
+window.subscribeNewsletter = () => {
+  const input = document.getElementById('newsletter-email');
+  const btn   = document.getElementById('newsletter-btn');
+  const msg   = document.getElementById('newsletter-msg');
+  const email = input.value.trim();
+
+  // Validation email
+  if (!email) {
+    msg.style.display = 'block';
+    msg.style.color   = '#EF4444';
+    msg.textContent   = '⚠ Please enter your email address.';
+    input.style.borderColor = '#EF4444';
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    msg.style.display = 'block';
+    msg.style.color   = '#EF4444';
+    msg.textContent   = '⚠ Please enter a valid email address.';
+    input.style.borderColor = '#EF4444';
+    return;
+  }
+
+  // Loading state
+  btn.disabled     = true;
+  btn.textContent  = '⏳ Subscribing...';
+  input.style.borderColor = 'var(--glass-border)';
+  msg.style.display = 'none';
+
+  // Simulate API call
+  setTimeout(() => {
+    // Success
+    btn.textContent  = '✅ Subscribed!';
+    btn.style.background = 'linear-gradient(135deg,#10B981,#38F9D7)';
+    input.value      = '';
+
+    msg.style.display = 'block';
+    msg.style.color   = '#10B981';
+    msg.innerHTML     = `🎉 <strong>${email}</strong> has been subscribed! Check your inbox for exclusive deals.`;
+
+    window.SN.toast('🎉 Subscribed successfully!', 's', 4000);
+
+    // Reset after 4s
+    setTimeout(() => {
+      btn.disabled         = false;
+      btn.textContent      = 'Subscribe ✉';
+      btn.style.background = '';
+      msg.style.display    = 'none';
+    }, 4000);
+  }, 1500);
+};
+</script>
+</body>
+</html>
